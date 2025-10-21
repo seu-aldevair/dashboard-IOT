@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Arduino que verifica a humidade do solo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            Painel de Umidade
+        </div>
+        <ul>
+            <li class="active" id="homeBtn">INÍCIO</li>
+            <li id="dashBtn">PAINEL</li>
+        </ul>
+    </div>
+    <div class="header-bar" id="headerBar">INÍCIO</div>
+    <div class="main">
+        <div class="breadcrumbs" id="breadcrumbs">
+            Painéis &gt; Arduino DHT22: Painel de Demonstração de Umidade
+        </div>
+        <h1 id="mainTitle" style="display:none;"></h1>
+        <div class="dashboard-content" id="dashboardContent">
+            <div class="dashboard-block large-graph">
+                <div class="panel-title">Nível de Umidade</div>
+                <div class="panel-subtitle">Tempo real - últimos 2 minutos</div>
+                <div class="humidity-graph">
+                    <svg viewBox="0 0 340 220" preserveAspectRatio="none">
+                        <polyline 
+                            fill="none" 
+                            stroke="#2196f3" 
+                            stroke-width="3"
+                            points="0,200 42,120 85,140 127,60 170,100 212,40 255,120 297,80 340,200"
+                        />
+                        <line x1="0" y1="200" x2="340" y2="200" stroke="#ccc" />
+                        <line x1="0" y1="30" x2="0" y2="200" stroke="#ccc" />
+                        <text x="16" y="46" font-size="16" fill="#2196f3">Umidade, %</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="dashboard-block humidity-block">
+                <div class="panel-title">Sensor de Umidade</div>
+                <div class="humidity-level">
+                    <div class="level-value">41</div>
+                    <div class="level-bar">
+                        <div class="bar-fill" style="height:41%;"></div>
+                    </div>
+                    <div class="level-label">UMIDADE %</div>
+                </div>
+            </div>
+        </div>
+        <div class="empty-content" id="emptyContent" style="display:none;">
+            <div class="arduino-list-block">
+                <div class="arduino-title">Placas Arduino</div>
+                <div class="arduino-list">
+                    <div class="arduino-item active">
+                        <span class="arduino-name">Arduino DHT22 : sensor de umidade para irrigação</span>
+                        <span class="arduino-status">USANDO</span>
+                    </div>
+                    <!-- Exemplo de outros arduinos (opcional) -->
+                    <!--
+                    <div class="arduino-item">
+                        <span class="arduino-name">Arduino Uno</span>
+                        <span class="arduino-status">DISPONÍVEL</span>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
