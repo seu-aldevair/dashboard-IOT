@@ -9,6 +9,7 @@
     <div class="sidebar">
         <div class="logo">
             Painel de Umidade
+            <span id="sidebarPage" class="sidebar-page">| INÍCIO</span>
         </div>
         <ul>
             <li class="active" id="homeBtn">INÍCIO</li>
@@ -40,13 +41,16 @@
                 </div>
             </div>
             <div class="dashboard-block humidity-block">
-                <div class="panel-title">Sensor de Umidade</div>
+                <div class="panel-title">Status da Bomba</div>
                 <div class="humidity-level">
-                    <div class="level-value">41</div>
+                    <div class="level-value" id="umidadeValor">DESLIGADA</div>
                     <div class="level-bar">
-                        <div class="bar-fill" style="height:41%;"></div>
+                        <div class="bar-fill" id="umidadeBar" style="height:20%;"></div>
                     </div>
-                    <div class="level-label">UMIDADE %</div>
+                    <div class="level-label">IRRIGAÇÃO</div>
+                    <div style="font-size: 0.75em; color: #88d4ff; margin-top: 12px; text-align: center;">
+                        Última atualização: <span id="ultimaAtualizacao">--:--:--</span>
+                    </div>
                 </div>
             </div>
         </div>
